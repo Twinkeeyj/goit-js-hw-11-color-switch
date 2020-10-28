@@ -12,16 +12,15 @@ const stop = document.body.querySelector('[data-action="stop"]');
 const body = document.querySelector('body');
 let intervalId;
 
+
 const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
-const randomCol = randomIntegerFromInterval(0, colors.length - 1);
+
+
 const changeColor = function () {
-    start.setAttribute('disabled', true)
+  start.setAttribute('disabled', true)
   intervalId = setInterval(() => {
-const randomIntegerFromInterval = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
 const randomCol = randomIntegerFromInterval(0, colors.length-1)
       body.style.backgroundColor = `${colors[randomCol]}`
         console.log(colors[randomCol]);
